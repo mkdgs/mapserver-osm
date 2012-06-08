@@ -1,6 +1,6 @@
 SHPTREE=shptree
 
-all: TM_WORLD_BORDERS-0.3 10m_admin_0_boundary_lines_land processed_p shoreline_300
+all: TM_WORLD_BORDERS-0.3 ne_10m_admin_0_boundary_lines_land processed_p shoreline_300
 
 # Implicit rules to map 'all' targets to their .shp and .qix dependencies
 %: %.shp %.qix ;
@@ -20,7 +20,7 @@ TM_WORLD_BORDERS-0.3.shp: TM_WORLD_BORDERS-0.3.zip
 	unzip TM_WORLD_BORDERS-0.3.zip
 	touch TM_WORLD_BORDERS-0.3.shp
 
-10m_admin_0_boundary_lines_land.shp: 10m-admin-0-boundary-lines-land.zip
+ne_10m_admin_0_boundary_lines_land.shp: 10m-admin-0-boundary-lines-land.zip
 	unzip 10m-admin-0-boundary-lines-land.zip
 	touch 10m_admin_0_boundary_lines_land.shp
 
